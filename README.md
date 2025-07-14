@@ -76,7 +76,9 @@ This deployment simulates a real-world production setup of a PHP-based student m
 
 ### 🔧 AWS Console Setup
 
-- ![VPC creation](./screenshots/Screenshot%20%28597%29.png)
+**VPC Creation:**  
+![VPC creation](./screenshots/Screenshot%20%28597%29.png)
+
 - [ ] Subnet and route table setup  
 - [ ] EC2 instance launch & SG config  
 - [ ] RDS instance and subnet group  
