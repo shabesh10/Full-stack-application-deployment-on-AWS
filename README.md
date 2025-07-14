@@ -79,15 +79,33 @@ This deployment simulates a real-world production setup of a PHP-based student m
 **VPC Creation:**  
 ![VPC creation](./screenshots/Screenshot%20%28597%29.png)
 
-- [ ] Subnet and route table setup  
-- [ ] EC2 instance launch & SG config  
-- [ ] RDS instance and subnet group  
-- [ ] Security Group inbound rules  
+**Subnet and Route Table Setup:**  
+![Subnet and route table setup](./screenshots/subnet-setup.png)
+
+**EC2 Instance Launch & Security Group Configuration:**  
+![EC2 launch](./screenshots/ec2-launch.png)
+
+**RDS Instance and Subnet Group:**  
+![RDS setup](./screenshots/rds-setup.png)
+
+**Security Group Inbound Rules:**  
+![Security group rules](./screenshots/sg-rules.png)
+
+---
 
 ### 💻 EC2 Server Configuration
 
-- [ ] Apache + PHP install  
-- [ ] Git clone of project  
-- [ ] Editing PHP config  
-- [ ] Importing SQL  
-- [ ] Accessing web app in browser  
+**Apache + PHP Installation:**  
+![Apache PHP install](./screenshots/apache-php.png)
+
+**Git Clone of Project:**  
+![Git clone](./screenshots/git-clone.png)
+
+**Editing PHP Config (`config.php`):**  
+![Edit config](./screenshots/edit-config.png)
+
+**Importing SQL into RDS:**  
+![SQL import](./screenshots/sql-import.png)
+
+**Accessing Web App in Browser:**  
+![Web app](./screenshots/web-app.png)
