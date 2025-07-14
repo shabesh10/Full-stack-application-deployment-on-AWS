@@ -19,7 +19,7 @@ This deployment simulates a real-world production setup of a PHP-based student m
 
 ## 🧱 Architecture Diagram
 
-📷 ![Architecture diagram]([./screenshots/final-project-architecture.drawio (3).png](https://github.com/shabesh10/Full-stack-application-deployment-on-AWS/blob/main/screenshots/final-project-architecture.drawio%20(3).png))  
+📷 ![Architecture diagram]:[screenshots/architecture.png] 
 ✅ Example layout:
 - Public subnet (EC2 instance)
 - Private subnet (RDS instance)
