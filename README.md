@@ -19,7 +19,7 @@ This deployment simulates a real-world production setup of a PHP-based student m
 
 ## 🧱 Architecture Diagram
 
-📷 ![Architecture diagram](screenshots/final-project-architecture.drawio (3).png)  
+📷 ![Architecture diagram](./screenshots/final-project-architecture.drawio (3).png)  
 ✅ Example layout:
 - Public subnet (EC2 instance)
 - Private subnet (RDS instance)
@@ -76,7 +76,7 @@ This deployment simulates a real-world production setup of a PHP-based student m
 
 ### 🔧 AWS Console Setup
 
-- ![VPC creation](screenshots/Screenshot (597).png)   
+- ![VPC creation](./screenshots/Screenshot (597).png)   
 - [ ] Subnet and route table setup  
 - [ ] EC2 instance launch & SG config  
 - [ ] RDS instance and subnet group  
