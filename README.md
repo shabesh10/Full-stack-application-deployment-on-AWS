@@ -150,14 +150,6 @@ As this was a **learning-focused, non-commercial project**, every component was 
 - Validated app functionality and DB communication
 - Practiced real-world deployment, networking, and troubleshooting skills
 
----
-
-## 💡 Future Scope
-
-- Add automation via CloudFormation or Terraform  
-- Setup CI/CD pipeline for PHP updates via GitHub Actions  
-- Integrate CloudWatch monitoring and RDS backups  
-- Deploy production-grade app on HTTPS using ACM + ALB
 
 ---
 
