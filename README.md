@@ -79,33 +79,53 @@ This deployment simulates a real-world production setup of a PHP-based student m
 **VPC Creation:**  
 ![VPC creation](./screenshots/Screenshot%20%28597%29.png)
 
-**Subnet and Route Table Setup:**  
-![Subnet and route table setup](./screenshots/subnet-setup.png)
-
 **EC2 Instance Launch & Security Group Configuration:**  
-![EC2 launch](./screenshots/ec2-launch.png)
+![EC2 Launch](./screenshots/Screenshot%20%28593%29.png)  
+![Security Group Config](./screenshots/Screenshot%20%28594%29.png)
 
 **RDS Instance and Subnet Group:**  
-![RDS setup](./screenshots/rds-setup.png)
+![RDS setup](./screenshots/Screenshot%20%28595%29.png)
 
-**Security Group Inbound Rules:**  
-![Security group rules](./screenshots/sg-rules.png)
 
 ---
 
+
 ### 💻 EC2 Server Configuration
 
-**Apache + PHP Installation:**  
-![Apache PHP install](./screenshots/apache-php.png)
+**Apache + PHP Installation to Web App Access:**  
+![Step 1](./screenshots/Screenshot%20%28569%29.png)  
+![Step 2](./screenshots/Screenshot%20%28570%29.png)  
+![Step 3](./screenshots/Screenshot%20%28571%29.png)  
+![Step 4](./screenshots/Screenshot%20%28572%29.png)  
+![Step 5](./screenshots/Screenshot%20%28573%29.png)  
+![Step 6](./screenshots/Screenshot%20%28574%29.png)  
+![Step 7](./screenshots/Screenshot%20%28575%29.png)  
+![Step 8](./screenshots/Screenshot%20%28576%29.png)  
+![Step 9](./screenshots/Screenshot%20%28577%29.png)  
+![Step 10](./screenshots/Screenshot%20%28578%29.png)  
+![Step 11](./screenshots/Screenshot%20%28579%29.png)  
+![Step 12](./screenshots/Screenshot%20%28580%29.png)  
+![Step 13](./screenshots/Screenshot%20%28581%29.png)  
+![Step 14](./screenshots/Screenshot%20%28582%29.png)  
+![Step 15](./screenshots/Screenshot%20%28583%29.png)  
+![Step 16](./screenshots/Screenshot%20%28584%29.png)
 
-**Git Clone of Project:**  
-![Git clone](./screenshots/git-clone.png)
 
-**Editing PHP Config (`config.php`):**  
-![Edit config](./screenshots/edit-config.png)
+---
 
-**Importing SQL into RDS:**  
-![SQL import](./screenshots/sql-import.png)
 
-**Accessing Web App in Browser:**  
-![Web app](./screenshots/web-app.png)
+**Accessing Web App via Internet & Entering Data:**  
+![Step 1](./screenshots/Screenshot%20%28587%29.png)  
+![Step 2](./screenshots/Screenshot%20%28588%29.png)  
+![Step 3](./screenshots/Screenshot%20%28589%29.png)  
+![Step 4](./screenshots/Screenshot%20%28590%29.png)  
+![Step 5](./screenshots/Screenshot%20%28591%29.png)  
+![Step 6](./screenshots/Screenshot%20%28592%29.png)
+These screenshots demonstrate successful public access to the deployed PHP web application from a browser, as well as interaction with the database through form inputs and submissions.
+
+**Remote DB Access & Data Verification in RDS:**  
+![Step 1](./screenshots/Screenshot%20%28599%29.png)  
+![Step 2](./screenshots/Screenshot%20%28600%29.png)
+These screenshots confirm that the data entered through the web app is successfully stored in the RDS MySQL database, verified via remote access from the EC2 instance.
+
+
