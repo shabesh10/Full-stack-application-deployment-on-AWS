@@ -1,74 +1,69 @@
 # ☁️ Cloud Deployment: PHP Web Application on AWS
 
-> 🚨 Note: This project showcases my ability to deploy and configure a cloud-native infrastructure on AWS.  
-> The PHP application used is open-source and not authored by me. The focus here is on **infrastructure setup, server provisioning, and secure deployment**.
+> 🚨 **Note:** This project demonstrates my ability to deploy a secure, cloud-native PHP application on AWS using EC2, RDS, VPC, and related services.  
+> The application used is open-source and credited below. My contribution lies in designing the infrastructure and successfully deploying the system end-to-end.
 
 ---
 
 ## 📌 Project Overview
 
-This deployment simulates a real-world production setup of a PHP-based student management system on AWS using:
+This deployment simulates a real-world production setup of a PHP-based **Student Management System** hosted on AWS, with an emphasis on secure architecture, hands-on networking, and CLI-driven configuration.
 
-- Amazon EC2 (for web server)
-- Amazon RDS (MySQL-compatible)
-- Custom VPC with public and private subnets
-- Security groups, route tables, and internet gateway
-- Manual `.sql` import via CLI from EC2 to RDS
+### 🔧 Stack Highlights:
+- **Amazon EC2** – For hosting the PHP web server
+- **Amazon RDS** – For storing student records in a MySQL DB
+- **Custom VPC** – With public/private subnets, route tables, and internet gateway
+- **Manual SQL Import** – From EC2 to RDS via MySQL CLI
+- **End-to-end Testing** – Browser access, DB connection validation, and data verification
 
 ---
 
 ## 🧱 Architecture Diagram
 
-📷 ![Architecture diagram](screenshots/architecture.png)
-✅ Example layout:
-- Public subnet (EC2 instance)
-- Private subnet (RDS instance)
-- Another private subnet (standby)
-- IGW attached to public subnet
-- Separate route tables
-- SSH and HTTP configured via security group rules
+![Architecture diagram](screenshots/architecture.png)
+
+### 🗺️ Infrastructure Layout:
+- Public subnet → EC2 instance (Web Server)
+- Private subnet → RDS instance (MySQL)
+- Separate private subnet → Standby/AZ2
+- Internet Gateway + NAT routing
+- Custom security groups for HTTP, SSH, and DB access
 
 ---
 
 ## 🛠️ Tools & Services Used
 
-- **AWS EC2** – Amazon Linux 2023 (Apache, PHP)
-- **AWS RDS** – MySQL 8.0 with private subnet group
-- **AWS VPC** – Custom VPC with 3 subnets across 2+ AZs
-- **AWS IAM** – Secure access via key pair
-- **Git + CLI** – Used to clone and configure the PHP app
-- **MySQL CLI** – Used to import `.sql` into RDS from EC2
-- **Netcat (`nc`)** – Used to test DB port access from EC2
+| Category       | Tools/Services                           |
+|----------------|------------------------------------------|
+| Compute        | Amazon EC2 (Amazon Linux 2023)           |
+| Database       | Amazon RDS (MySQL 8.0)                   |
+| Networking     | VPC, Subnets, Route Tables, IGW, SGs     |
+| Access Control | IAM, Key Pairs                           |
+| Dev Tools      | Git, CLI, Netcat (`nc`), MySQL CLI       |
 
 ---
 
-## 🌐 Deployment Steps (Summary)
+## 🚀 Deployment Steps (Summary)
 
-1. ✅ **Create VPC and Subnets**
-   - CIDR: `10.0.0.0/24`
-   - Subnet A (public): `10.0.0.0/26`
-   - Subnet B (private): `10.0.0.64/26` (RDS)
-   - Subnet C (private standby): `10.0.0.128/26`
+1. **VPC & Subnet Setup**
+   - CIDR Block: `10.0.0.0/24`
+   - 3 Subnets (1 public, 2 private across AZs)
 
-2. ✅ **Attach IGW and Route Tables**
-   - Public RT → IGW route `0.0.0.0/0`
-   - Associate subnets correctly
+2. **Routing & Internet Access**
+   - Attached Internet Gateway to public subnet
+   - Created custom route tables for public/private traffic
 
-3. ✅ **Launch EC2 Instance**
-   - Amazon Linux 2023
-   - Installed Apache, PHP, MySQL client
-   - Cloned project using Git
-   - Edited `config.php` to point to RDS
+3. **EC2 Instance Configuration**
+   - Installed Apache, PHP, and MySQL client
+   - Cloned project via Git and configured `config.php`
 
-4. ✅ **Create RDS MySQL DB**
-   - Placed in private subnet
-   - Security group allows access only from EC2
-   - Connected using CLI + imported `.sql` file
+4. **RDS Setup**
+   - Private subnet placement, custom SG
+   - Whitelisted EC2 in DB SG for secure access
 
-5. ✅ **Test & Validate**
-   - Accessed app via EC2 public IP
-   - Verified DB interaction using MySQL CLI
-   - Used `nc` and browser to validate ports and UI
+5. **App + Database Integration**
+   - Imported `.sql` into RDS via MySQL CLI
+   - Verified connection and data flow via UI
 
 ---
 
@@ -86,9 +81,7 @@ This deployment simulates a real-world production setup of a PHP-based student m
 **RDS Instance and Subnet Group:**  
 ![RDS setup](./screenshots/Screenshot%20%28595%29.png)
 
-
 ---
-
 
 ### 💻 EC2 Server Configuration
 
@@ -110,22 +103,63 @@ This deployment simulates a real-world production setup of a PHP-based student m
 ![Step 15](./screenshots/Screenshot%20%28583%29.png)  
 ![Step 16](./screenshots/Screenshot%20%28584%29.png)
 
-
 ---
 
+### 🌐 Web App Access & Data Entry
 
-**Accessing Web App via Internet & Entering Data:**  
+**Browser Access and Form Submissions:**  
 ![Step 1](./screenshots/Screenshot%20%28587%29.png)  
 ![Step 2](./screenshots/Screenshot%20%28588%29.png)  
 ![Step 3](./screenshots/Screenshot%20%28589%29.png)  
 ![Step 4](./screenshots/Screenshot%20%28590%29.png)  
 ![Step 5](./screenshots/Screenshot%20%28591%29.png)  
 ![Step 6](./screenshots/Screenshot%20%28592%29.png)
-These screenshots demonstrate successful public access to the deployed PHP web application from a browser, as well as interaction with the database through form inputs and submissions.
 
-**Remote DB Access & Data Verification in RDS:**  
+These screenshots demonstrate public access to the app and successful interaction with the backend DB through user inputs.
+
+---
+
+### 🧪 Remote DB Validation
+
+**MySQL CLI Check for Data:**  
 ![Step 1](./screenshots/Screenshot%20%28599%29.png)  
 ![Step 2](./screenshots/Screenshot%20%28600%29.png)
-These screenshots confirm that the data entered through the web app is successfully stored in the RDS MySQL database, verified via remote access from the EC2 instance.
 
+Data entered through the frontend is visible inside the MySQL RDS instance, confirming proper integration between the app and the database.
+
+---
+
+## 🙏 Credits
+
+This project uses the open-source **Student Management System** from [PHP Gurukul](https://phpgurukul.com/student-management-system-using-php-and-mysql/).  
+All rights and content belong to the respective authors. I used the code solely for deployment and infrastructure demonstration purposes.
+
+---
+
+## 🧹 Cleanup & Cost Note
+
+After successful deployment and testing, **all AWS resources were deleted** to avoid incurring further cloud charges.  
+As this was a **learning-focused, non-commercial project**, every component was manually cleaned up via the AWS Console.
+
+---
+
+## ✅ Outcome
+
+- Designed and deployed a secure 3-tier architecture
+- Connected PHP app to MySQL RDS via private subnets
+- Validated app functionality and DB communication
+- Practiced real-world deployment, networking, and troubleshooting skills
+
+---
+
+## 💡 Future Scope
+
+- Add automation via CloudFormation or Terraform  
+- Setup CI/CD pipeline for PHP updates via GitHub Actions  
+- Integrate CloudWatch monitoring and RDS backups  
+- Deploy production-grade app on HTTPS using ACM + ALB
+
+---
+
+If you’d like to learn more or want help setting up something similar — reach out!
 
