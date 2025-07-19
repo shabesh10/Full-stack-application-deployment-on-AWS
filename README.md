@@ -69,6 +69,31 @@ This deployment simulates a real-world production setup of a PHP-based **Student
 
 ## 📸 Screenshots
 
+### 🌐 Web App Access & Data Entry
+
+**Browser Access and Form Submissions:**  
+![Step 1](./screenshots/Screenshot%20%28587%29.png)  
+![Step 2](./screenshots/Screenshot%20%28588%29.png)  
+![Step 3](./screenshots/Screenshot%20%28589%29.png)  
+![Step 4](./screenshots/Screenshot%20%28590%29.png)  
+![Step 5](./screenshots/Screenshot%20%28591%29.png)  
+![Step 6](./screenshots/Screenshot%20%28592%29.png)
+
+These screenshots demonstrate public access to the app and successful interaction with the backend DB through user inputs.
+
+---
+
+### 🧪 Remote DB Validation
+
+**MySQL CLI Check for Data:**  
+![Step 1](./screenshots/Screenshot%20%28599%29.png)  
+![Step 2](./screenshots/Screenshot%20%28600%29.png)
+
+Data entered through the frontend is visible inside the MySQL RDS instance, confirming proper integration between the app and the database.
+
+---
+
+
 ### 🔧 AWS Console Setup
 
 **VPC Creation:**  
@@ -102,30 +127,6 @@ This deployment simulates a real-world production setup of a PHP-based **Student
 ![Step 14](./screenshots/Screenshot%20%28582%29.png)  
 ![Step 15](./screenshots/Screenshot%20%28583%29.png)  
 ![Step 16](./screenshots/Screenshot%20%28584%29.png)
-
----
-
-### 🌐 Web App Access & Data Entry
-
-**Browser Access and Form Submissions:**  
-![Step 1](./screenshots/Screenshot%20%28587%29.png)  
-![Step 2](./screenshots/Screenshot%20%28588%29.png)  
-![Step 3](./screenshots/Screenshot%20%28589%29.png)  
-![Step 4](./screenshots/Screenshot%20%28590%29.png)  
-![Step 5](./screenshots/Screenshot%20%28591%29.png)  
-![Step 6](./screenshots/Screenshot%20%28592%29.png)
-
-These screenshots demonstrate public access to the app and successful interaction with the backend DB through user inputs.
-
----
-
-### 🧪 Remote DB Validation
-
-**MySQL CLI Check for Data:**  
-![Step 1](./screenshots/Screenshot%20%28599%29.png)  
-![Step 2](./screenshots/Screenshot%20%28600%29.png)
-
-Data entered through the frontend is visible inside the MySQL RDS instance, confirming proper integration between the app and the database.
 
 ---
 
